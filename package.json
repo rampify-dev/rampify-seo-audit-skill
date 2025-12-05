@@ -1,0 +1,50 @@
+{
+  "name": "rampify-seo-audit-skill",
+  "version": "1.0.0",
+  "description": "Free Claude Skill for comprehensive single-page SEO audits",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "jest",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\""
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "cursor",
+    "seo",
+    "seo-audit",
+    "schema",
+    "meta-tags",
+    "ai-tools"
+  ],
+  "author": "Rampify Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rampify-dev/rampify-seo-audit-skill.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rampify-dev/rampify-seo-audit-skill/issues"
+  },
+  "homepage": "https://github.com/rampify-dev/rampify-seo-audit-skill#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.50.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.1.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

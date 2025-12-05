@@ -1,0 +1,131 @@
+{
+  "name": "rampify-seo-audit",
+  "version": "1.0.0",
+  "description": "Comprehensive single-page SEO audits for Claude Code and Cursor",
+  "author": "Rampify Team",
+  "license": "MIT",
+  "repository": "https://github.com/rampify-dev/rampify-seo-audit-skill",
+
+  "triggers": [
+    "audit this page for seo",
+    "check seo issues",
+    "analyze seo",
+    "seo audit",
+    "check meta tags",
+    "validate schema",
+    "check headings",
+    "analyze images"
+  ],
+
+  "capabilities": {
+    "file_access": true,
+    "web_fetch": true,
+    "code_execution": false
+  },
+
+  "supported_file_types": [
+    "html",
+    "htm",
+    "jsx",
+    "tsx",
+    "mdx",
+    "md",
+    "vue",
+    "svelte",
+    "astro"
+  ],
+
+  "configuration": {
+    "severity_levels": {
+      "description": "Customize what counts as critical vs warning",
+      "default": {
+        "meta_description_missing": "critical",
+        "title_missing": "critical",
+        "title_too_short": "warning",
+        "title_too_long": "warning",
+        "h1_missing": "warning",
+        "h1_multiple": "warning",
+        "alt_text_missing": "info",
+        "schema_invalid": "critical",
+        "schema_missing": "warning"
+      }
+    },
+
+    "thresholds": {
+      "description": "Adjust when warnings trigger",
+      "default": {
+        "title_min_length": 50,
+        "title_max_length": 60,
+        "meta_description_min_length": 150,
+        "meta_description_max_length": 160,
+        "h1_max_count": 1,
+        "word_count_min": 300,
+        "image_max_size_kb": 200
+      }
+    }
+  },
+
+  "checks": [
+    {
+      "id": "meta_tags",
+      "name": "Meta Tags",
+      "description": "Validates title, description, Open Graph, Twitter Cards",
+      "enabled": true
+    },
+    {
+      "id": "schema_org",
+      "name": "Schema.org Structured Data",
+      "description": "Checks JSON-LD, Microdata, and RDFa schemas",
+      "enabled": true
+    },
+    {
+      "id": "headings",
+      "name": "Heading Structure",
+      "description": "Analyzes H1-H6 hierarchy and optimization",
+      "enabled": true
+    },
+    {
+      "id": "images",
+      "name": "Image Optimization",
+      "description": "Checks alt text, file sizes, lazy loading",
+      "enabled": true
+    },
+    {
+      "id": "links",
+      "name": "Link Analysis",
+      "description": "Internal and external link validation",
+      "enabled": true
+    },
+    {
+      "id": "content",
+      "name": "Content Quality",
+      "description": "Word count, readability, keyword density",
+      "enabled": true
+    },
+    {
+      "id": "mobile",
+      "name": "Mobile Responsiveness",
+      "description": "Viewport meta tag, responsive indicators",
+      "enabled": true
+    },
+    {
+      "id": "performance",
+      "name": "Performance Signals",
+      "description": "Page speed indicators (resource hints, compression)",
+      "enabled": true
+    }
+  ],
+
+  "output_format": {
+    "sections": [
+      "summary",
+      "critical_issues",
+      "warnings",
+      "info",
+      "recommendations",
+      "priority_order"
+    ],
+    "include_code_snippets": true,
+    "include_fix_instructions": true
+  }
+}
