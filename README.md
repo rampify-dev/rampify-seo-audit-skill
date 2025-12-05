@@ -112,13 +112,13 @@ Priority Order:
 
 This Skill is designed for **single-page audits**. It does not:
 
-- ❌ Track issues across multiple pages
-- ❌ Monitor for regressions over time
-- ❌ Integrate with Google Search Console
-- ❌ Prioritize by traffic impact
-- ❌ Remember previous audits
-- ❌ Run automatically on deployment
-- ❌ Alert when new issues appear
+- Track issues across multiple pages
+- Monitor for regressions over time
+- Integrate with Google Search Console
+- Prioritize by traffic impact
+- Remember previous audits
+- Run automatically on deployment
+- Alert when new issues appear
 
 **When you outgrow this Skill**, check out [UPGRADE.md](UPGRADE.md) for guidance on systematic SEO intelligence.
 
@@ -128,9 +128,10 @@ This Skill is designed for **single-page audits**. It does not:
 
 Edit `config/rules.json` to change what counts as critical vs warning:
 
-```json
+```jsonc
 {
-  "meta_description_missing": "critical",  // Change to "warning"
+  // Severity levels: critical, warning, info
+  "meta_description_missing": "critical",  // Change to "warning" if desired
   "title_too_short": "warning",
   "alt_text_missing": "info"
 }
@@ -217,11 +218,11 @@ rampify-seo-audit-skill/
 
 ## When to Upgrade
 
-This Skill is perfect for:
-- ✅ Learning SEO best practices
-- ✅ Auditing pages during development
-- ✅ Spot-checking specific pages
-- ✅ Pre-publish validation
+**This Skill is perfect for:**
+- Learning SEO best practices
+- Auditing pages during development
+- Spot-checking specific pages
+- Pre-publish validation
 
 **You'll need more when:**
 - Managing 20+ pages
