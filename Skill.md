@@ -1,5 +1,5 @@
 ---
-name: SEO Page Auditor
+name: seo-page-auditor
 description: Performs comprehensive SEO audits on HTML pages, checking meta tags, schema markup, headings, images, links, and content quality. Use when user asks to audit, check, or analyze SEO.
 license: MIT License - See LICENSE file
 ---
